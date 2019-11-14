@@ -1,12 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/kv/kv.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/kv/medida.kv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NullBank.py" beforeDir="false" afterPath="$PROJECT_DIR$/NullBank.py" afterDir="false" />
-    </list>
+    <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -141,7 +136,7 @@
       <workItem from="1572484393015" duration="2149000" />
       <workItem from="1573056415633" duration="4250000" />
       <workItem from="1573661346607" duration="10294000" />
-      <workItem from="1573689696007" duration="4632000" />
+      <workItem from="1573689696007" duration="4991000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit - MER(Modelo Entidade Relacionamento)">
       <created>1572486033334</created>
