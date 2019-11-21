@@ -1,101 +1,126 @@
 """coding: utf-8"""
 
+import kivy
 from kivy.app import App
-from kivy.uix.floatlayout import FloatLayout
-from kivy.uix.label import Label
+from kivy.core.window import Window
+from kivy.uix.boxlayout import BoxLayout
 from kivy.uix.button import Button
-'''
-def build():
-    lb = Label()
-    lb.text = "Tela de Boas Vindas"
-    lb.italic = True
-    lb.font_size = 50
-    return lb
+from kivy.uix.label import Label
+from kivy.uix.textinput import TextInput
+from kivy.uix.floatlayout import FloatLayout
+from kivy.utils import get_color_from_hex as color
+Window.clearcolor = [0, 0, 0, 1]
 
 
-app = App()
-app.build = build
-app.run()
-'''
+class Background(FloatLayout):
 
-'''
-def click():
-    print("botão clicado")
-
-
-def build():
-    bt = Button()
-    bt.text = "Login"
-    bt.font_size = 30
-    bt.on_press = click
-    return bt
+    def __init__(self, **kwargs):
+        super(Background, self).__init__(**kwargs)
+        self.orientation = 'vertical'
+        lb = Label()
+        lb.color = [255, 10, 10, 1]
+        lb.text = "BG"
+        self.add_widget(lb)
 
 
-app = App()
-app.build = build
-app.run()
-'''
-'''
+class Tela3(FloatLayout):
 
-def build():
-    ti = TextInput()
-    ti.text = "Edite o Texto"
-    return ti
+    def on_press_bt(self):
+        janela.root_window.remove_widget(janela.root)
+        janela.root_window.add_widget(Tela1())
 
-
-app = App()
-app.build = build
-app.run()
-'''
-
-"""
-def click():
-    print(ti.text)
+    def __init__(self, **kwargs):
+        super(Tela3, self).__init__(**kwargs)
+        self.orientation = 'vertical'
+        bt1 = Button()
+        bt1.text = "Click"
+        bt1.on_press = self.on_press_bt
+        bt2 = Button()
+        bt2.text = "Click 2"
+        self.add_widget(bt1)
+        self.add_widget(bt2)
+        self.add_widget(Button(text="tela3"))
 
 
-def build():
-    layout = FloatLayout()
+class Tela1(FloatLayout):
 
-    global ti
-    ti = TextInput(text="Input")
-    ti.size_hint = None, None
-    ti.height = 300
-    ti.width = 400
-    ti.y = 150
-    ti.x = 50
+    def connect_bd(self):
+        janela.root_window.remove_widget(janela.root)
+        janela.root = None
+        janela.root_window.add_widget(Tela2())
 
-    bt = Button()
-    bt.text = "Print in console"
-    bt.size_hint = None, None
-    bt.height = 50
-    bt.width = 200
-    bt.y = 50
-    bt.x = 150
+    def __init__(self, **kwargs):
+        super(Tela1, self).__init__(**kwargs)
+        layout = FloatLayout()
 
-    bt.on_press = click
+        l_bd_welcome = Label()
+        l_bd_welcome.size_hint = 1, .1
+        l_bd_welcome.pos_hint = {"x": 0, "y": .8}
+        l_bd_welcome.text = "Conectar ao Banco de dados"
+        l_bd_welcome.italic = True
+        l_bd_welcome.font_size = 30
+        l_bd_welcome.color = 1, 1, 1, 1
 
-    layout.add_widget(ti)
-    layout.add_widget(bt)
+        l_bd_user = Label()
+        l_bd_user.size_hint = .25, .09
+        l_bd_user.pos_hint = {"x": .05, "y": .6}
+        l_bd_user.text = "Usuário"
+        l_bd_user.font_size = 20
 
-    return layout
+        ti_bd_user = TextInput()
+        ti_bd_user.size_hint = .5, .09
+        ti_bd_user.pos_hint = {"x": .25, "y": .6}
+        ti_bd_user.text = ""
+        ti_bd_user.font_size = 20
+
+        l_bd_pass = Label()
+        l_bd_pass.size_hint = .25, .09
+        l_bd_pass.pos_hint = {"x": .05, "y": .5}
+        l_bd_pass.text = "Senha"
+        l_bd_pass.font_size = 20
+
+        ti_bd_pass = TextInput()
+        ti_bd_pass.size_hint = .5, .09
+        ti_bd_pass.pos_hint = {"x": .25, "y": .5}
+        ti_bd_pass.text = ""
+        ti_bd_pass.font_size = 20
+
+        bt_bd_login = Button()
+        bt_bd_login.text = "Login"
+        bt_bd_login.size_hint = .4, .1
+        bt_bd_login.pos_hint = {"x": .3, "y": .3}
+
+        bt_bd_login.on_press = self.connect_bd
+
+        layout.add_widget(l_bd_welcome)
+        layout.add_widget(l_bd_user)
+        layout.add_widget(l_bd_pass)
+        layout.add_widget(ti_bd_user)
+        layout.add_widget(ti_bd_pass)
+        layout.add_widget(bt_bd_login)
+
+        self.add_widget(layout)
 
 
-app = App()
-app.title = "NullBank"
-Window.size = 500, 500
+class Tela2(FloatLayout):
 
-app.build = build
-app.run()
-"""
+    def on_press_bt(self):
+        janela.root_window.remove_widget(janela.root)
+        janela.root_window.add_widget(Tela3())
+
+    def __init__(self, **kwargs):
+        super(Tela2, self).__init__(**kwargs)
+        self.orientation = "vertical"
+        bt = Button()
+        bt.text = "CLIque"
+        bt.on_press = self.on_press_bt
+        self.add_widget(bt)
 
 
-class RootWidget(FloatLayout):
-    pass
-
-
-class MedidaApp(App):
+class Py(App):
     def build(self):
-        return RootWidget()
+        return Background()
 
 
-MedidaApp().run()
+janela = Py()
+janela.run()
