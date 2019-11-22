@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="" />
+    <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/drop.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Inserções.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Inserções.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/null_bank.sql" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.sql" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,7 +50,7 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Trabalho-02-IC" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -137,6 +142,11 @@
       <workItem from="1573056415633" duration="4250000" />
       <workItem from="1573661346607" duration="10294000" />
       <workItem from="1573689696007" duration="4991000" />
+      <workItem from="1574296252775" duration="861000" />
+      <workItem from="1574357015245" duration="1009000" />
+      <workItem from="1574387866788" duration="153000" />
+      <workItem from="1574437435938" duration="26000" />
+      <workItem from="1574437531281" duration="1756000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit - MER(Modelo Entidade Relacionamento)">
       <created>1572486033334</created>
@@ -170,7 +180,7 @@
     <option name="LAST_COMMIT_MESSAGE" value="Primeiro Commit - MER(Modelo Entidade Relacionamento)" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/TrabalhoBD$NullBank.coverage" NAME="NullBank Coverage Results" MODIFIED="1573693610984" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/TrabalhoBD$NullBank.coverage" NAME="NullBank Coverage Results" MODIFIED="1574387889877" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/TrabalhoBD$kv.coverage" NAME="kv Coverage Results" MODIFIED="1573690757842" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

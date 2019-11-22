@@ -1,12 +1,9 @@
 
+insert into agencia (id_agencia, nome_agencia, cidade)
+values 					(457,		"Julio","123345","M","Gerente",1500,19900707,	29,"RUA",			"Sem Nome",		'70','centro','666003400','Fortaleza','CE',456);
 
 insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
-values (457,"Julio","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','666003400','Fortaleza','CE',456),
-       (345,"Julia","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'169','centro','666000320','Fortaleza','CE',456),
-       (344,"André","123345","M","Caixa",2000,19900307,29,"RUA","Sem Nome",'148','centro','666000000','Itapajé','CE',213),
-       (324,"Ana","123345","F","Gerente",3000,19900305,29,"RUA","Sem Nome",'228','centro','666000000','Itapajé','CE',213),
-       (341,"Gabriel","121245","M","Atendente",1500,19900107,29,"RUA","Sem Nome",'248','centro','666000000','Itapajé','CE',213),
-       (320,"Taína","121246","F","Atendente",1500,19900107,29,"RUA","Sem Nome",'348','centro','666000000','Itapajé','CE',213);
+values 					(457,		"Julio","123345","M","Gerente",1500,19900707,	29,"RUA",			"Sem Nome",		'70','centro','666003400','Fortaleza','CE',456);
        
 insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
 values (579,"Guilherme","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','666000000','Sobral','CE',342),
