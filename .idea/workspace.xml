@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/drop.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Inserções.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Inserções.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/null_bank.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.mwb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/null_bank.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.mwb.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/null_bank.sql" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -146,7 +147,7 @@
       <workItem from="1574357015245" duration="1009000" />
       <workItem from="1574387866788" duration="153000" />
       <workItem from="1574437435938" duration="26000" />
-      <workItem from="1574437531281" duration="1756000" />
+      <workItem from="1574437531281" duration="2975000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit - MER(Modelo Entidade Relacionamento)">
       <created>1572486033334</created>

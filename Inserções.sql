@@ -1,23 +1,65 @@
 
 insert into agencia (id_agencia, nome_agencia, cidade)
-values 					(457,		"Julio","123345","M","Gerente",1500,19900707,	29,"RUA",			"Sem Nome",		'70','centro','666003400','Fortaleza','CE',456);
+values 	('0001', 'Agência Sobral', 'Sobral'),
+		('0002', 'Agência Camocim', 'Camocim'),
+		('0003', 'Agência São Carlos', 'São Carlos'),
+        ('0004', 'Agência Itapajé', 'Itapajé');
+
+     
+insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+values ('00001',"Guilherme","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Sobral','CE','0001'),
+       ('00002',"Gabriele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Sobral','CE','0001'),
+       ('00003',"Guiliana","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Sobral','CE','0001'),
+       ('00004',"Mara","123355","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'569','centro','66600430','Sobral','CE','0001'),
+       ('00005',"Rafaela","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'769','centro','66612000','Sobral','CE','0001'),
+       ('00006',"Moacir","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Sobral','CE','0001');
+
 
 insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
-values 					(457,		"Julio","123345","M","Gerente",1500,19900707,	29,"RUA",			"Sem Nome",		'70','centro','666003400','Fortaleza','CE',456);
-       
+values ('00007',"João ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Camocim','CE','0002'),
+       ('00008',"Claudia","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Camocim','CE','0002'),
+       ('00009',"Berenice","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Camocim','CE','0002'),
+       ('00010',"Maria","123355","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'569','centro','66600430','Camocim','CE','0002'),
+       ('00011',"Victoria","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'769','centro','66612000','Camocim','CE','0002'),
+       ('00012',"Marcelo","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Camocim','CE','0002');
+
+
 insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
-values (579,"Guilherme","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','666000000','Sobral','CE',342),
-       (557,"Gabriele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','666000000','Sobral','CE',342),
-       (558,"Guiliana","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','666004500','Sobral','CE',342),
-       (559,"Mara","123355","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'569','centro','666004300','Sobral','CE',342),
-       (560,"Rafaela","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'769','centro','666120000','Sobral','CE',342),
-       (561,"Moacir","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Sobral','CE',342);
+values ('00013',"Mateus ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','São Carlos','SP','0003'),
+       ('00014',"Mariele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','São Carlos','SP','0003'),
+       ('00015',"Mercia","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','São Carlos','SP','0003'),
+       ('00016',"Meiri","123355","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'569','centro','66600430','São Carlos','SP','0003'),
+       ('00017',"Vitoria","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'769','centro','66612000','São Carlos','SP','0003'),
+       ('00018',"Marcelo","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','São Carlos','SP','0003');
+
+
+insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+values ('00019',"Mateus ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Itapajé','CE','0004'),
+       ('00020',"Mariele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Itapajé','CE','0004'),
+       ('00021',"Mercia","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Itapajé','CE','0004'),
+       ('00022',"Meiri","123355","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'569','centro','66600430','Itapajé','CE','0004'),
+       ('00023',"Vitoria","123345","F","Caixa",1500,19900707,29,"RUA","Sem Nome",'769','centro','66612000','Itapajé','CE','0004'),
+       ('00024',"Marcelo","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Itapajé','CE','0004');
+
+
+insert into dependente 
+values 	('Saulo',20020718,17,'Pai','00003'),
+		('Sandra',20010818,18,'Pai','00001'),
+		('Carol',20130908,6,'Mae','00014'),
+		('Marcelo',20121118,7,'Pai','00014'),
+		('Julia', 20010918, 18, 'Filho(a)', '00020'),
+		('Pietro',20140718,5,'Cônjuge','00009'),
+		('Sergio',20041028,15,'Pai','00017'),
+		('Sandra',20010818,18,'Pai','00009'),
+		('Rui',20110328,8,'Mae','00013'),
+		('Caique',20190818,0,'Pai','00023');
+	  
 
 
 insert into cliente (cpf,nome_completo,RG,orgao_emissor,UF_emissor,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado)
-values ("09835623120","Cleo","324569872","SSP","CE",19910707,29,"RUA","no Name",'32','centro','666007700','Itapaje','CE'),
-	   ("09845123120","Ivania","324569272","SSP","CE",19910609,29,"RUA","no Name",'54','alto','666007700','Itapaje','CE'),
-        ("09848623120","Cleide","324162872","SSP","CE",19910504,29,"RUA","no Name",'124','centro','666007700','Itapaje','CE')  ;
+values 	('09835623120',"Cleo",'324569872','SSP','CE',19910707,29,'RUA','no Name','32','centro','66600770','Itapaje','CE'),
+		('09845123120',"Ivania",'324569272','SSP','CE',19910609,29,'RUA','no Name','54','alto','66600770','Itapaje','CE'),
+		('09848623120',"Cleide",'324162872','SSP','CE',19910504,29,'RUA','no Name','124','centro','66600770','Itapaje','CE')  ;
         
 insert into cliente (cpf,nome_completo,RG,orgao_emissor,UF_emissor,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado)
 values ("09835213120","Jackson Dias","312369872","SSP","CE",19910707,28,"RUA","no Name",'132','centro','666007700','Itapaje','CE'),
@@ -72,20 +114,7 @@ values (7980,0.0,333232,19842903120,252,456),
         (7346,0.0,584504,34567823421,562,342),
         (7347,0.0,594504,91842903100,562,342); 
 
-insert into dependente 
-value ("Carlos ",20000906,19,"Mae",320),
-	  ("Julia",20010918,18,"Tia",320),
-      ("Miguel",20110918,8,"Pai",341),
-	  ("Marcelo",20121118,7,"Padrasto",555),
-      ("Carol",20130908,6,"Mae",222),
-      ("Sandra",20010818,18,"Tio",251),
-      ("Saulo",20020718,17,"Pai",251),
-      ("Pietro",20140718,5,"Madrasta",345),
-      ("Sergio",20041028,15,"Pai",561),
-      ("Sandra",20010818,18,"Pai",561),
-      ("Rui",20110328,8,"Mae",559),
-      ("Caique",20190818,0,"Pai",562);
-      
+
 insert into email 
 values ("Angela@gmail.com",19840923120),
        ("Angel@gmail.com",19840923120),

@@ -240,6 +240,28 @@ CREATE TABLE IF NOT EXISTS `teste` (
   PRIMARY KEY (`idteste`))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `cliente_tem_conta`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `cliente_tem_conta` (
+  `cliente_cpf` VARCHAR(11) NOT NULL,
+  `conta_id_conta` VARCHAR(8) NOT NULL,
+  `conta_agencia_id_agencia` VARCHAR(4) NOT NULL,
+  PRIMARY KEY (`cliente_cpf`, `conta_id_conta`, `conta_agencia_id_agencia`),
+  INDEX `fk_cliente_has_conta_conta1_idx` (`conta_id_conta` ASC, `conta_agencia_id_agencia` ASC),
+  INDEX `fk_cliente_has_conta_cliente1_idx` (`cliente_cpf` ASC),
+  CONSTRAINT `fk_cliente_has_conta_cliente1`
+    FOREIGN KEY (`cliente_cpf`)
+    REFERENCES `cliente` (`cpf`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION,
+  CONSTRAINT `fk_cliente_has_conta_conta1`
+    FOREIGN KEY (`conta_id_conta` , `conta_agencia_id_agencia`)
+    REFERENCES `conta` (`id_conta` , `agencia_id_agencia`)
+    ON DELETE NO ACTION
+    ON UPDATE NO ACTION)
+ENGINE = InnoDB;
+
 
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
