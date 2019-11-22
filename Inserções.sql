@@ -59,61 +59,112 @@ values 	('Saulo',20020718,17,'Pai','00003'),
 insert into cliente (cpf,nome_completo,RG,orgao_emissor,UF_emissor,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado)
 values 	('09835623120',"Cleo",'324569872','SSP','CE',19910707,29,'RUA','no Name','32','centro','66600770','Itapaje','CE'),
 		('09845123120',"Ivania",'324569272','SSP','CE',19910609,29,'RUA','no Name','54','alto','66600770','Itapaje','CE'),
-		('09848623120',"Cleide",'324162872','SSP','CE',19910504,29,'RUA','no Name','124','centro','66600770','Itapaje','CE')  ;
-        
-insert into cliente (cpf,nome_completo,RG,orgao_emissor,UF_emissor,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado)
-values ("09835213120","Jackson Dias","312369872","SSP","CE",19910707,28,"RUA","no Name",'132','centro','666007700','Itapaje','CE'),
-	   ("09845563120","Igor Silva","373069272","SSP","CE",19910429,28,"RUA","no Name",'504','alto','666007700','Itapaje','CE'),
-	   ("09848903120","Cleide Oliveira","334562872","SSP","CE",19910410,28,"RUA","no Name",'174','São Francisco 2','666997700','Itapaje','CE'),
-	   ("19842908920","Clailton Santos","334652927","SSP","CE",19921010,27,"RUA","no Name",'714','Antonio Bezerra','776887700','Fortaleza','CE'),
-       ("19842904520","Suzana Paz","334652927","SSP","CE",19920810,27,"RUA","no Name",'417','Antonio Bezerra','776887700','Fortaleza','CE'),
-       ("19842903120","Lucia Ponte","334652827","SSP","CE",19920510,27,"RUA","no Name",'712','Aldeota','776887700','Fortaleza','CE'),
-       ("45842903120","Gabriel Santos","334652927","SSP","CE",19921010,27,"RUA","no Name",'714','Antonio Bezerra','776887700','Fortaleza','CE'),
-       ("19842903000","Lucas Vasconcelos","444652927","SSP","CE",19920810,27,"RUA","no Name",'233','Antonio Bezerra','776886600','Fortaleza','CE'),
-       ("19840923120","Angela Silva","334652920","SSP","CE",19921020,27,"RUA","no Name",'234','Antonio Bezerra','776887700','Fortaleza','CE'),
-       ("19842903100","Carlos Silvestre","224652927","SSP","CE",19931010,26,"RUA","no Name",'141','Centro','336887700','Sobral','CE'),
-       ("19849203100","Julia Santiago","244652927","SSP","CE",19930908,26,"RUA","no Name",'133','Centro','336887700','Sobral','CE'),
-       ("18942903100","Carmen Costa","224652928","SSP","CE",19930110,26,"RUA","no Name",'777','Centro','334887700','Sobral','CE'),
-       ("91842903100","Helena Costa","224652827","SSP","CE",19930604,26,"RUA","no Name",'567','Centro','336887700','Sobral','CE'),
-       ("33342903100","Julia Medeiros","224662927","SSP","CE",19931026,26,"RUA","no Name",'541','Centro','336887700','Sobral','CE'),
-       ("19782903100","Carlos Calvacante","223252927","SSP","CE",19931010,26,"RUA","no Name",'141','Centro','336887700','Sobral','CE');
+		('09848623120',"Cleide",'324162872','SSP','CE',19910504,29,'RUA','no Name','124','centro','66600770','Itapaje','CE'),
+		('09835213120','Jackson Dias','312369872','SSP','CE',19910707,28,'RUA','no Name','132','centro','66600770','Itapaje','CE'),
+		('09845563120','Igor Silva','373069272','SSP','CE',19910429,28,'RUA','no Name','504','alto','66600770','Itapaje','CE'),
+		('09848903120','Cleide Oliveira','334562872','SSP','CE',19910410,28,'RUA','no Name','174','São Francisco 2','66699770','Itapaje','CE'),
+	   
+		('19842908920','Clailton Santos','334652927','SSP','CE',19921010,27,'RUA','no Name','714','Antonio Bezerra','77688770','Fortaleza','CE'),
+		('19842904520','Suzana Paz','334652927','SSP','CE',19920810,27,'RUA','no Name','417','Antonio Bezerra','77688770','Fortaleza','CE'),
+		('19842903120','Lucia Ponte','334652827','SSP','CE',19920510,27,'RUA','no Name','712','Aldeota','77688770','Fortaleza','CE'),
        
+		('45842903120','Gabriel Santos','334652927','SSP','CE',19921010,27,'RUA','no Name','714','Antonio Bezerra','77688770','Fortaleza','CE'),
+		('19842903000','Lucas Vasconcelos','444652927','SSP','CE',19920810,27,'RUA','no Name','233','Antonio Bezerra','77688660','Fortaleza','CE'),
+		('19840923120','Angela Silva','334652920','SSP','CE',19921020,27,'RUA','no Name','234','Antonio Bezerra','77688770','Fortaleza','CE'),
+       
+		('19842903100','Carlos Silvestre','224652927','SSP','CE',19931010,26,'RUA','no Name','141','Centro','33688770','Sobral','CE'),
+		('19849203100','Julia Santiago','244652927','SSP','CE',19930908,26,'RUA','no Name','133','Centro','33688770','Sobral','CE'),
+		('18942903100','Carmen Costa','224652928"','SSP','CE',19930110,26,'RUA','no Name','777','Centro','33488770','Sobral','CE'),
+       
+		('91842903100','Helena Costa','224652827','SSP','CE',19930604,26,'RUA','no Name','567','Centro','33688770','Sobral','CE'),
+		('33342903100','Julia Medeiros','224662927','SSP','CE',19931026,26,'RUA','no Name','541','Centro','33688770','Sobral','CE'),
+		('19782903100','Carlos Calvacante','223252927','SSP','CE',19931010,26,'RUA','no Name','141','Centro','33688770','Sobral','CE');
 
 
+insert into email 
+values ("Angela@gmail.com",19840923120),
+       ("Angel@gmail.com",19840923120),
+       ("Lucas@gmail.com",19842903000),
+       ("Lucia@gmail.com",19842903120),
+       ("Suzana@gmail.com",19842904520),
+       ("Clailton@gmail.com",19842908920),
+       ("Roni@gmail.com",2513456789),
+       ("Valdo@gmail.com",2513457789),
+       ("Simas@gmail.com",43567123409),
+       ("Gabriel@gmail.com",45842903120),
+       ("Carmen@gmail.com",18942903100),
+       ("Carlos@gmail.com",19782903100),
+       ("CarlosSilva@gmail.com",19842903100),
+       ("Julia@gmail.com",19849203100),
+       ("Gustavo@gmail.com",2513457706),
+       ("JuliaMedeiro@gmail.com",33342903100),
+       ("Icaro@gmail.com",34567823421),
+       ("Helena@gmail.com",91842903100),
+       ("Jackson@gmail.com","09835213120"),
+       ("Valdomiro@gmail.com","09835623120"),
+       ("Vitor@gmail.com","09845123120"),
+       ("Igor@gmail.com","09845563120"),
+       ("Vania@gmail.com","09848623120"),
+       ("Valeska@gmail.com","09848623120"),
+       ("Cleide@gmail.com","09848903120"),
+       ("Tomas@gmail.com","2513457786");
 
 
-
-
-
-
+insert into telefone
+values ('85999999999','19840923120'),
+       ('85888888888','19840923120'),
+       ('85969041230','19840923120'),
+       ('85980046790','19842903000'),
+       ('85969045467','19842903120'),
+       ('85978042001','19842904520'),
+       ('85969041150','19842908920'),
+	   ('85969041101','2513456789'),
+       ('85941141101','2513457789'),
+       ('88885041101','43567123409'),
+       ('88963041101','45842903120'),
+       ('88992141101','18942903100'),
+       ('88861141101','19782903100'),
+       ('88941151101','19842903100'),
+       ('88881141101','19849203100'),
+       ('88941141106','2513457706'),
+       ('88941341101','33342903100'),
+       ('88941141101','34567823421'),
+       ('88941141111','91842903100'),
+       ('85929111111','09835213120'),
+       ('85921111111','09835623120'),
+       ('85914444444','09845123120'),
+       ('85889999999','09845563120'),
+       ('85881111111','09848623120'),
+       ('85962222222','09848623120'),
+       ('85983333333','09848903120'),
+       ('85929292929','2513457786');
+       
 -- 213 Itapaje, 342 Sobral, 456 Fortaleza --
 -- gerente fortaleza 252 457,gerente itapaje 324 556, gerente Sobral 557 562-- 
-insert into conta (id_conta,saldo,senha,cliente_cpf,gerente_matricula,agencia_id_agencia)
-values (7980,0.0,333232,19842903120,252,456),
-	   (7250,0.0,333232,19840923120,252,456),
-	   (7260,0.0,433232,19842903000,252,456),
-       (7270,0.0,454232,19842904520,457,456),
-	   (7280,0.0,454212,19842908920,457,456),
-       (7300,0.0,452342,2513456789,457,456),
-	   (7310,0.0,552342,43567123409,457,456),
-       (7321,0.0,552333,45842903120,457,456),
-	   (7322,0.0,562333,"09835213120",324,213),
-	   (7323,0.0,552433,"09835623120",324,213),
-	   (7324,0.0,552403,"09845123120",324,213),
-        (7325,0.0,552404,"09845563120",324,213),
-        (7326,0.0,522404,"09845623120",556,213),
-        (7327,0.0,572404,"09845623120",556,213),
-        (7328,0.0,579404,"09848903120",556,213),
-        (7329,0.0,570404,"2513457786",556,213),
-        (7340,0.0,530504,18942903100,557,342),
-        (7341,0.0,530604,19782903100,557,342),
-        (7342,0.0,520604,19842903100,557,342),
-        (7343,0.0,524604,19849203100,557,342),
-        (7344,0.0,514604,2513457706,562,342),
-        (7345,0.0,584604,33342903100,562,342),
-        (7346,0.0,584504,34567823421,562,342),
-        (7347,0.0,594504,91842903100,562,342); 
+insert into conta (id_conta,saldo,senha,gerente_matricula,agencia_id_agencia)
+values ('0001',0.0,'333232','00001','0001'),
+	   ('0002',0.0,'333232','00002','0001'),
+	   ('0003',0.0,'433232','00001','0001'),
+       
+       ('0004',0.0,'454232','00002','0001'),
+	   ('0005',0.0,'454212','00007','0002'),
+       ('0006',0.0,'452342','00008','0002'),
+       
+       ('0007',0.0,'452342','00007','0002'),
+       ('0008',0.0,'452342','00008','0002'),
+       ('0009',0.0,'452342','00013','0003'),
+       
+       ('0010',0.0,'452342','00014','0003'),
+       ('0011',0.0,'452342','00013','0003'),
+       ('0012',0.0,'452342','00014','0003'),
+       
+       ('0013',0.0,'452342','00020','0004'),
+       ('0014',0.0,'452342','00019','0004'),
+       ('0015',0.0,'452342','00020','0004');
 
+select f.matricula, a.id_agencia ,a.nome_agencia,a.cidade from funcionario f  inner join agencia a on f.agencia_id_agencia = a.id_agencia where cargo ='Gerente';
+
+select matricula from funcionario where cargo ='Gerente';
 
 insert into email 
 values ("Angela@gmail.com",19840923120),

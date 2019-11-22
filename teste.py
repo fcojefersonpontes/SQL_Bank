@@ -2,7 +2,7 @@ import MySQLdb as bd
 
 host="localhost"
 user='root'
-senha='bdv4153r0ss0'
+senha='root'
 data='null_bank'
 port=3306
 
