@@ -27,41 +27,43 @@ class ConnectionBd:
         port = 3306
 
         self.connect = Bd.connect(host, user, senha, data, port)
-
-        """ Define que as tuplas do banco serão transformadas em dicionarios,
-            o objetivo das funçoes é:formar a string que  seja igual ao comando em sql relativo a funcao """
-
+        """
+        Definir q as tuplas do banco serao transformadas em dicionarios o objetivo 
+        das funçoes e sempre o msm :formar a string que  seja igual ao comando em sql relativo a funcao
+        """
         self.cursor = self.connect.cursor(Bd.cursors.DictCursor)
-        
-    def select(self, fields, tables, where=None):
+        print("tentariva de conexão")
 
-        """ fields recebe as strings com o nome das colunas
-            table : nome das tabelas,pode ser mais de uma,
-            where : é opcional, mas épossível adicionar o predicado"""
+    """ values e uma lista com o valores para inserir table e a tabela onde vai ser inserido  
+        e fields os atributos da tabela """
+
+    def select(self, fields, tables, where=None):
+        """#fields recebe as strings com o nome das colunas
+                                         # table=o nome das tabelas,pode ser mais de uma,
+                                         # where é opcional,mas ai e so adicionar o predicado"""
 
         query = 'select ' + fields + " from  " + tables
-
         if where:
             query = query + ' WHERE ' + where
         self.cursor.execute(query)
         return self.cursor.fetchall()
 
+    """
+        sets e um dicionario onde a chave é o atributo e ele recebe o novo valor tables e where 
+        msm jeito q no select
+    """
+
     def insert(self, values, table, fields=None):
-
-        """ values é uma lista com o valores para inserir
-            table é a tabela onde vai ser inserido  e fields os atributos da tabela"""
-
         query = "insert into " + table
         if fields:
             query = query + ' (' + fields + ')'
 
-        query = query + ' values ' + '(' + ','.join([v for v in values]) + ')'
+        query = query + ' values ' + ','.join(['(' + v + ')' for v in values])
 
         self.cursor.execute(query)
         self.connect.commit()
 
     def update(self, sets, tables, where=None):
-
         query = "update " + tables + " set "
         query = query + ','.join([fields + '=' + "'" + values + "'" for fields, values in sets.items()])
         if where:
@@ -70,25 +72,7 @@ class ConnectionBd:
         self.cursor.execute(query)
         self.connect.commit()
 
-    def update(self, sets, tables, where=None):
-
-        """ fields recebe as strings com o nome das colunas
-            table : nome das tabelas,pode ser mais de uma,
-            where : é opcional, mas épossível adicionar o predicado"""
-
-        query = "update " + tables + " set "
-        query = query + ','.join([fields + '=' + "'" + values + "'" for fields, values in sets.items()])
-        if where:
-            query = query + " where " + where
-
-        self.cursor.execute(query)
-        self.connect.commit()
-
-    def delete(self, table, where):
-        """ fields recebe as strings com o nome das colunas
-            table : nome das tabelas,pode ser mais de uma,
-            where : é opcional, mas épossível adicionar o predicado"""
-
+    def delete(self, table, where):  # do msm jeito q no select
         query = " delete from  " + table + ' where ' + where
 
         self.cursor.execute(query)
@@ -296,4 +280,3 @@ if __name__ == '__main__':
     NullBank = Main()
     NullBank.run()
     print("final main")
-    print("my")

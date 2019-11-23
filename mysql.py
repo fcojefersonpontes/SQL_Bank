@@ -2,8 +2,8 @@ import MySQLdb as bd
 
 host="localhost"
 user='root'
-senha='root'
-data='null_bank'
+senha='12345'
+data='escola_curso'
 port=3306
 
 con=bd.connect(host,user,senha,data,port)
@@ -27,7 +27,7 @@ def insert (values,table,fields=None):#values e uma lista com o valores para ins
     if fields:
         query=query +' (' + fields +')'
 
-    query=query + ' values ' +'('+','.join([  v  for v in values])
+    query=query + ' values ' +','.join(['(' + v +')' for v in values])
 
     c.execute(query)
     con.commit()
@@ -45,10 +45,9 @@ def update (sets,tables,where=None):#sets e um dicionario onde a chave é o atri
 
 def delete(table,where):#do msm jeito q no select
     query=" delete from  "+table+' where '+where
-    print()
-    #c.execute(query)
-    con.commit()
 
+    c.execute(query)
+    con.commit()
 #exemplos
 print(select('*','cursos'))
 
