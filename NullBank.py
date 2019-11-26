@@ -107,7 +107,6 @@ def func_delete():
     table_d = input("")
 
 
-
 if __name__ == '__main__':
     print("Logar no Mysql-Server")
     my_sql_usr = str(input("Usuário do Mysql-server :"))

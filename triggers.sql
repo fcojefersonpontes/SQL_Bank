@@ -74,7 +74,7 @@ CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`trasnsacao_AFTER_INSERT` AFTE
 BEGIN
 	UPDATE conta
 	SET saldo = saldo + NEW.valor
-    where NEW.conta_id_conta = id_conta AND conta_agencia_id_agencia = agencia_id_agencia;
+    where id_conta = NEW.conta_id_conta AND agencia_id_agencia = NEW.conta_agencia_id_agencia;
 END$$
 
 USE `null_bank`$$
@@ -147,6 +147,7 @@ SELECT
 INTO @contador2 FROM
     cliente_tem_conta
 WHERE
+	
     conta_agencia_id_agencia = @new_ag;
     IF contador>2
 		THEN
@@ -160,4 +161,3 @@ DELIMITER ;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
