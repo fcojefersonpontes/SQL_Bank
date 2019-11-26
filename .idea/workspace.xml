@@ -2,21 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c7ba61ce-e196-4de5-a5b8-7497bcf5ecb5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/views.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/TrabalhoBD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/TrabalhoBD.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Inserções.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Inserções.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NullBank.py" beforeDir="false" afterPath="$PROJECT_DIR$/NullBank.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/kv/kv.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kv/main.kv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/kv/medida.kv" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/null_bank.mwb" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.mwb" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/null_bank.mwb.bak" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.mwb.bak" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/null_bank.sql" beforeDir="false" afterPath="$PROJECT_DIR$/null_bank.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/teste2.0.py" beforeDir="false" afterPath="$PROJECT_DIR$/teste2.0.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triggers.sql" beforeDir="false" afterPath="$PROJECT_DIR$/triggers.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/triggers2.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/triggers2.0.sql" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -161,7 +151,7 @@
       <workItem from="1574456953521" duration="434000" />
       <workItem from="1574540351879" duration="3760000" />
       <workItem from="1574603887496" duration="1047000" />
-      <workItem from="1574713496498" duration="11206000" />
+      <workItem from="1574713496498" duration="12900000" />
     </task>
     <task id="LOCAL-00001" summary="Primeiro Commit - MER(Modelo Entidade Relacionamento)">
       <created>1572486033334</created>

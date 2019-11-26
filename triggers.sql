@@ -24,14 +24,14 @@ CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`funcionario_AFTER_UPDATE`
 BEFORE UPDATE ON `funcionario`
 FOR EACH ROW
 BEGIN
-	IF NEW.salario IS NOT NULL AND NEW.salario < 1500.00
+	IF NEW.salario_f IS NOT NULL AND NEW.salario_f < 1500.00
     THEN
-		SET NEW.salario=OLD.salario;
+		SET NEW.salario_f=OLD.salario_f;
 	END IF;
     
 UPDATE agencia 
 SET 
-    montante_salarial = montante_salarial + (NEW.salario-OLD.salario)
+    montante_salarial = montante_salarial + (NEW.salario_f-OLD.salario_f)
     
 WHERE
     id_agencia = NEW.agencia_id_agencia;
@@ -43,9 +43,9 @@ CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`funcionario_BEFORE_INSERT`
 BEFORE INSERT ON `funcionario`
 FOR EACH ROW
 BEGIN
-	IF NEW.salario IS NOT NULL AND NEW.salario < 1500.00
+	IF NEW.salario_f IS NOT NULL AND NEW.salario_f < 1500.00
     THEN
-		SET NEW.salario=1500.00;
+		SET NEW.salario_f=1500.00;
 	END IF;
 
 END$$
@@ -56,7 +56,7 @@ AFTER INSERT ON `funcionario`
 FOR EACH ROW
 BEGIN
 	UPDATE agencia
-    SET montante_salarial= montante_salarial + NEW.salario
+    SET montante_salarial= montante_salarial + NEW.salario_f
     WHERE id_agencia=NEW.agencia_id_agencia;
 END$$
 
@@ -64,13 +64,13 @@ USE `null_bank`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`funcionario_AFTER_DELETE` AFTER DELETE ON `funcionario` FOR EACH ROW
 BEGIN
 	UPDATE agencia
-    SET montante_salarial= montante_salarial - OLD.salario
+    SET montante_salarial= montante_salarial - OLD.salario_f
     WHERE id_agencia=OLD.agencia_id_agencia;
 END$$
 
 
 USE `null_bank`$$
-CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`trasnsacao_AFTER_INSERT` AFTER INSERT ON `trasnsacao` FOR EACH ROW
+CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`trasnsacao_AFTER_INSERT` AFTER INSERT ON `transacao` FOR EACH ROW
 BEGIN
 	UPDATE conta
 	SET saldo = saldo + NEW.valor
@@ -93,7 +93,7 @@ WHERE
     funcionario_matricula = @mat;
     IF @contador >= 5
     THEN
-		DELETE FROM dependente WHERE nome_completo=NEW.nome_completo;
+		DELETE FROM dependente WHERE nome_completo_d=NEW.nome_completo_d;
     END IF;
     
 END$$
@@ -102,18 +102,27 @@ USE `null_bank`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`cliente_tem_conta_AFTER_INSERT` AFTER INSERT ON `cliente_tem_conta` FOR EACH ROW
 BEGIN
 	DECLARE contador INT;
+    DECLARE contador2 INT;
     DECLARE new_id VARCHAR(8);
+    DECLARE new_ag VARCHAR(4);   
     
     SET @new_id = NEW.conta_id_conta;
+    SET @new_ag = NEW.conta_agencia_id_agencia;
 SELECT 
-    COUNT(cliente_cpf)
+    COUNT(cliente_cpf_c)
 INTO @contador FROM
     cliente_tem_conta
 WHERE
     conta_id_conta = @new_id;
+SELECT 
+    COUNT(cliente_cpf_c)
+INTO @contador2 FROM
+    cliente_tem_conta
+WHERE
+    conta_agencia_id_agencia = @new_ag;
     IF contador>2
 		THEN
-		DELETE FROM cliente_tem_conta WHERE conta_id_conta=NEW.conta_id_conta;
+		DELETE FROM cliente_tem_conta WHERE conta_id_conta=NEW.conta_id_conta AND conta_agencia_id_agencia = NEW.conta_agencia_id_agencia ;
     END IF;
 END$$
 
@@ -121,18 +130,27 @@ USE `null_bank`$$
 CREATE DEFINER = CURRENT_USER TRIGGER `null_bank`.`cliente_tem_conta_AFTER_UPDATE` AFTER UPDATE ON `cliente_tem_conta` FOR EACH ROW
 BEGIN
 	DECLARE contador INT;
+    DECLARE contador2 INT;
     DECLARE new_id VARCHAR(8);
+    DECLARE new_ag VARCHAR(4);   
     
     SET @new_id = NEW.conta_id_conta;
+    SET @new_ag = NEW.conta_agencia_id_agencia;
 SELECT 
-    COUNT(cliente_cpf)
+    COUNT(cliente_cpf_c)
 INTO @contador FROM
     cliente_tem_conta
 WHERE
     conta_id_conta = @new_id;
+SELECT 
+    COUNT(cliente_cpf_c)
+INTO @contador2 FROM
+    cliente_tem_conta
+WHERE
+    conta_agencia_id_agencia = @new_ag;
     IF contador>2
 		THEN
-		DELETE FROM cliente_tem_conta WHERE conta_id_conta=NEW.conta_id_conta;
+		DELETE FROM cliente_tem_conta WHERE conta_id_conta=NEW.conta_id_conta AND conta_agencia_id_agencia = NEW.conta_agencia_id_agencia ;
     END IF;
 END$$
 

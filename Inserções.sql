@@ -1,12 +1,13 @@
+USE `null_bank` ;
 
-insert into agencia (id_agencia, nome_agencia, cidade)
-values 	('0001', 'Agência Sobral', 'Sobral'),
-		('0002', 'Agência Camocim', 'Camocim'),
-		('0003', 'Agência São Carlos', 'São Carlos'),
-        ('0004', 'Agência Itapajé', 'Itapajé');
+insert into agencia 
+values 	('0001', 'Agência Sobral', 'Sobral', 0),
+		('0002', 'Agência Camocim', 'Camocim', 0),
+		('0003', 'Agência São Carlos', 'São Carlos', 0),
+        ('0004', 'Agência Itapajé', 'Itapajé', 0);
 
 
-insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+insert into funcionario 
 values ('00001',"Guilherme","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Sobral','CE','0001'),
        ('00002',"Gabriele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Sobral','CE','0001'),
        ('00003',"Guiliana","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Sobral','CE','0001'),
@@ -15,7 +16,7 @@ values ('00001',"Guilherme","123345","M","Gerente",1500,19900707,29,"RUA","Sem N
        ('00006',"Moacir","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Sobral','CE','0001');
 
 
-insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+insert into funcionario 
 values ('00007',"João ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Camocim','CE','0002'),
        ('00008',"Claudia","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Camocim','CE','0002'),
        ('00009',"Berenice","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Camocim','CE','0002'),
@@ -24,7 +25,7 @@ values ('00007',"João ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome
        ('00012',"Marcelo","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','Camocim','CE','0002');
 
 
-insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+insert into funcionario 
 values ('00013',"Mateus ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','São Carlos','SP','0003'),
        ('00014',"Mariele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','São Carlos','SP','0003'),
        ('00015',"Mercia","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','São Carlos','SP','0003'),
@@ -33,7 +34,7 @@ values ('00013',"Mateus ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nom
        ('00018',"Marcelo","123375","M","Caixa",1500,19900707,29,"RUA","Sem Nome",'869','centro','66656600','São Carlos','SP','0003');
 
 
-insert into funcionario (matricula,nome_completo,senha,sexo,cargo,salario,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado,agencia_id_agencia)
+insert into funcionario 
 values ('00019',"Mateus ","123345","M","Gerente",1500,19900707,29,"RUA","Sem Nome",'70','centro','66600000','Itapajé','CE','0004'),
        ('00020',"Mariele","123345","F","Gerente",1500,19900707,29,"RUA","Sem Nome",'169','centro','66600000','Itapajé','CE','0004'),
        ('00021',"Mercia","122245","F","Atendente",1500,19900707,29,"RUA","Sem Nome",'269','centro','66600450','Itapajé','CE','0004'),
@@ -56,7 +57,7 @@ values 	('Saulo',20020718,17,'Pai','00003'),
 
 
 
-insert into cliente (cpf,nome_completo,RG,orgao_emissor,UF_emissor,data_nasc,idade,tipo_logradouro,nome_logradouro,numero,bairro,CEP,cidade,estado)
+insert into cliente 
 values 	
 		('09835623120','Cleo','324569872','SSP','CE',19910707,29,'RUA','no Name','32','centro','66600770','Itapaje','CE'),
 		('09845123120','Ivania','324569272','SSP','CE',19910609,29,'RUA','no Name','54','alto','66600770','Itapaje','CE'),
@@ -82,7 +83,7 @@ values
 		('19782903100','Carlos Calvacante','223252927','SSP','CE',19931010,26,'RUA','no Name','141','Centro','33688770','Sobral','CE');
 
 
-insert into email(email, cliente_cpf)
+insert into email 
 values    
 		('Vania@gmail.com','09848623120'),
 		('Igor@gmail.com','09845563120'),
@@ -102,9 +103,8 @@ values
 		('JuliaMedeiro@gmail.com','33342903100'),
 		('Jackson@gmail.com','09835213120');
         
-select * from email;
 
-insert into telefone(numero_ctt, cliente_cpf)
+insert into telefone 
 values 
 
        ('85881111111','09848623120'),
@@ -133,9 +133,8 @@ values
        ('85969041230','19840923120'),
        ('85980046790','19842903000');
 
--- 213 Itapaje, 342 Sobral, 456 Fortaleza --
--- gerente fortaleza 252 457,gerente itapaje 324 556, gerente Sobral 557 562--
-insert into conta (id_conta,saldo,senha,gerente_matricula,agencia_id_agencia, tipo_conta)
+
+insert into conta (id_conta,saldo,senha_c,gerente_matricula,agencia_id_agencia, tipo_conta)
 values ('0001',0.0,'333232','00001','0001', 'Corrente'),
 	   ('0002',0.0,'333232','00002','0001', 'Corrente'),
 	   ('0003',0.0,'433232','00001','0001', 'Especial'),
@@ -155,7 +154,6 @@ values ('0001',0.0,'333232','00001','0001', 'Corrente'),
        ('0014',0.0,'452342','00019','0004', 'Especial'),
        ('0015',0.0,'452342','00020','0004', 'Poupança');
        
-select * from cliente;
  
 insert into corrente
 values 	(20191125, '0001', '0001'),
@@ -201,7 +199,7 @@ values	('18942903100', '0001', '0001'),
 		('09835623120', '0015', '0004'),
 		('33342903100', '0015', '0004');
 
-insert into transacao
+insert into transacao (id_trasnsacao, tipo, valor, data_hora, conta_id_conta, conta_agencia_id_agencia)
 values
 		('00001', 'Depósito', 50.00,  '2019-10-23 17:05:28', '0001', '0001'),
 		('00002', 'Estorno', 50.00,   '2019-10-23 17:05:28', '0002', '0001'),
@@ -224,3 +222,4 @@ values
 		('00017', 'Estorno', 50.00, '2019-10-23 17:05:28', '0015', '0004'),
 		('00018', 'Transferência', 50.00, '2019-10-23 17:05:28', '0015', '0004');
 	
+select * from transacao;
